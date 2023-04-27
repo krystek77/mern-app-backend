@@ -1,0 +1,21 @@
+use('custom');
+db.users.drop();
+db.users.insertMany(
+  [
+    {avatar:'',
+    email:'k.wrona@pralma.pl',
+    password:"12345678",
+    name:'Krystian',
+    lastName:'Wrona',
+    createdAt:new Date().toISOString(),
+    updatedAt:new Date().toISOString(),
+    },
+    {avatar:'',
+    email:'biuro@pralma.pl',
+    password:"87654321",
+    name:'Zdzisław',
+    lastName:'Wrona',
+    createdAt:new Date().toISOString(),
+    updatedAt:new Date().toISOString(),
+    },
+  ])

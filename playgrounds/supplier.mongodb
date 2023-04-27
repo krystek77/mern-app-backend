@@ -1,0 +1,8 @@
+use('custom');
+db.suppliers.drop();
+db.suppliers.insertMany(
+  [
+
+    {companyName:"Alliance Laundry CE s.r.o.",street:"Mistecka",streetNumber:"1116",zipcode:"74-258",city:"Pribor",phone:"+480 55-676-88-82",email:"mailto:Jiri.Vermirovsky@alliancels.com"},
+    
+  ])

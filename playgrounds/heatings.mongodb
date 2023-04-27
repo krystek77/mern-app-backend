@@ -1,0 +1,13 @@
+use('custom');
+db.heatings.drop();
+db.heatings.insertMany(
+  [
+    //RX180-520 i Pralma
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"woda ciepła"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"woda ciepła + przystosowanie do pary"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"podgrzew elektryczny"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"podgrzew elektryczny i przystosowanei do pary"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"bezpośredni podgrzew parowy (w tym zawór parowy)"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"podgrzew elektryczno parowy"},
+    //
+  ])

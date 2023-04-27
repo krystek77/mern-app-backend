@@ -1,0 +1,24 @@
+use('custom');
+db.options.drop();
+db.options.insertMany(
+  [
+    //RX180-520 i Pralma
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"3 zawór zasilający"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"zawory zasilające 3/4 cala"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"drugi zawór spustowy"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"pompa spustowa"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"wyższa moc podgrzewu"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"niższa moc podgrzewu"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"oblachowanie lakierowane"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"nierdzewny panel przedni"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"nierdzewne panele boczne"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"górny panel bez otwieranego pojemnika"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"RS485 i USB"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"4 sygnały pomp (tylko podstawowy sterownik)"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"8 sygnałów pomp"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"automatyczne otwieranie drzwi (brak zasilania)"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"ochrona IP44 - wesja dla marynarki"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"zestaw śrub montażowych"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"opakowanie foliowe"},
+    //
+  ])

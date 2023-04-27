@@ -1,0 +1,31 @@
+use('custom');
+db.additionalequipments.drop();
+db.additionalequipments.insertMany(
+    [
+        {
+            model:"WM-150",
+            name:"Wózek na mokre pranie",
+            description:"Wózek, typ WM-150, w wersji standardowej, jest przeznaczony do transportu międzyoperacyjnego mokrego prania w pomieszczeniach pralni. Podwozie wykonane ze stali kwasoodpornej jest osadzone na kółkach z niebrudzącą gumą o średnicy Φ125 mm. Poruszanie się wózkiem jest komfortowe a kółka nie pozostawiają śladów na posadzce. Dodatkowo 2 kółka skrętne ułatwiają manewrowanie pełnym wózkiem w ciasnych korytarzach. Pojemnik polipropylenowy ma atest PZH. Gumowy wąż ułatwia odprowadzanie wody pozostałej po mokrym praniu.",
+            technicalData:["pojemność: 150 litrów","kółka: 2 skrętne, 2 stałe","wężyk do odprowadzania wody","średnica kółka: fi 125mm","w. x. sz. x gł.: 750x600x800 mm"],
+            price:"1350",
+            featuredFor:[ObjectId("63b93bdeae4ba2c0ea86564d"),ObjectId("63b93bf2ae4ba2c0ea86564f"),ObjectId("63b93bfeae4ba2c0ea865651")],
+            images:[""],
+            createdAt:new Date().toISOString(),
+            updatedAt:new Date().toISOString(),
+            slug:"wozek-na-mokre-pranie",
+             
+        },
+        {
+            model:"WS-150",
+            name:"Wózek na suche pranie",
+            description:"Wózek, typ WS-150, w wersji standardowej, jest przeznaczony do transportu międzyoperacyjnego suchego bądź brudnego prania w pomieszczeniach pralni. Podwozie wykonane ze stali kwasoodpornej jest osadzone na kółkach łożyskowanych z niebrudzącą gumą o średnicy Φ125 mm. Poruszanie się wózkiem jest komfortowe a kółka nie pozostawiają śladów na posadzce. Dodatkowo 2 kółka skrętne ułatwiają manewrowanie pełnym wózkiem w ciasnych korytarzach. Pojemnik polipropylenowy ma atest PZH. Wózek może być wyposażony w pokrywę: plastikową bądź aluminiową.",
+            technicalData:["pojemność: 150 litrów","kółka: 2 skrętne, 2 stałe","średnica kółka: fi 125mm","w. x. sz. x gł.: 750x600x800 mm"],
+            price:"1200",
+            featuredFor:[ObjectId("63b93c23ae4ba2c0ea865657")],
+            images:[""],
+            createdAt:new Date().toISOString(),
+            updatedAt:new Date().toISOString(),
+            slug:"wozek-na-suche-pranie",
+        }
+    ]
+)

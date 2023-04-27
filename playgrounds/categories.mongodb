@@ -1,0 +1,30 @@
+
+use('custom');
+db.categories.drop();
+db.categories.insertMany(
+  [
+        {name:"pralnice bębnowe czołowe"},
+        {name:"pralnice bębnowe boczne"},
+        {name:"pralnice z barierą higieny"},
+        {name:"pralnice specjalne"},
+        {name:"bariery higieny sztywnomocowane"},
+        {name:"bariery higieny wysokoobrotowe"},
+        {name:"pralnicowirówki wysokoobrotowe"},
+        {name:"pralnicowirówki szybkoobrotowe"},
+        {name:"pralnicowirówki normalnoobrotowe"},
+        {name:"suszarki bębnowe"},
+        {name:"suszarki komorowe"},
+        {name:"wirówki"},
+        {name:"prasownice nieckowe"},
+        {name:"prasownice walcowe"},
+        {name:"wózki i regały"},
+        {name:"stoły do prasowania"},
+        {name:"zestawy pralko - suszarka"},
+        {name:"zestawy suszarko - suszarka"},
+        {name:"pralnicowirówki wysokoobrotowe samoobsługowe"},
+        {name:"pralnicowirówki szybkoobrotowe samoobsługowe"},
+        {name:"profesjonalne pralnicowirówki samoobsługowe"},
+        {name:"profesjonalne suszarki samoobsługowe"},
+        {name:"przemysłowe do pralni samoobsługowej"},
+      ],
+);

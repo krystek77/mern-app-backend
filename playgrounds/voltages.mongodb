@@ -1,0 +1,12 @@
+use('custom');
+db.voltages.drop();
+db.voltages.insertMany(
+  [
+    //RX180-520 i Pralma
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"200-240/50-60Hz/1Ph (bez podgrzewu elektrycznego)"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"200-240V/50-60Hz/3Ph"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"380-415V/50-60Hz/3Ph+N"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"380-415V/50-60Hz/3Ph"},
+    {categoryId:[ObjectId("63b93bfeae4ba2c0ea865651")],name:"440-480V/50-60Hz/3Ph"},
+    //
+  ])

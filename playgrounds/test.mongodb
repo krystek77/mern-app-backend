@@ -1,0 +1,22 @@
+use('custom');
+// db.animals.createIndex({ name: 1 });
+// db.animals.find({ name: 'animal3' }).explain('executionStats');
+// db.categories
+//   .find({ slug: 'suszarki-komorowe' }, { title: 1, slug: 1 })
+//   .explain('executionStats');
+db.friends.drop();
+db.friends.insertMany([
+  {name:'agata',age:18,fruits:["banan","jabłko","gruszka"]},
+  {name:"aga",age:35,fruits:["banan","jabłko","winogron"]},
+  {name:"agatka",age:23,fruits:["banan","jabłko","cytryna"]},
+  {name:"krystian",age:46,fruits:["banan","jabłko","pomarańcza"]},
+  {name:'akata',age:90,fruits:["banan","jabłko","mango"]}]);
+db.friends.find({ name: { $regex: /^aga$/i } });
+db.friends.find({name:{$regex:/aga/i}}).count();
+db.friends.find({"fruits":"mango"});
+db.friends.find({"fruits":{$all:["banan","mango"]}})
+db.firneds.find({ "fruits": ['banan', 'jabłko', 'gruszka'] });
+db.friends.updateOne({ name: 'akata' }, { $inc: { age: 1 } });
+db.friends.findOne({ name: 'akata' });
+db.friends.updateMany({}, { $set: { lastName: 'DEFAULT' } });
+db.friends.find();

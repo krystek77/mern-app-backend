@@ -24,6 +24,7 @@ import sparePartRoutes from "./routes/sparepart.js";
 import additionalEquipmentRoutes from "./routes/additionalEquipment.js";
 import userRoutes from "./routes/user.js";
 import NBPRoutes from "./routes/nbp.js";
+import {whiteList} from './config/config.js'
 
 const app = express();
 app.use(bodyParser.json({ limit: "30mb" }));
@@ -32,15 +33,23 @@ mongoose.set("strictQuery", false);
 
 app.use(
   cors({
-    origin: "*",
+    origin: (origin,callback)=>{
+      if(whiteList.indexOf(origin)!==-1 || !origin ) {
+        callback(null,true)
+      } else {
+        callback(new Error(`Not allowed by CORS: --- ${origin} ---`))
+      }
+    },
     methods: "GET,PUT,POST,DELETE,PATCH",
+    credentials: true,
+    optionsSuccessStatus: 200
   })
 );
 const __dirname = path.resolve();
 // app.use(express.static(path.join(__dirname, 'views')));
 console.log(__dirname)
 
-app.use("/",express.static(path.join(__dirname,"public")));
+app.use(express.static(path.join(__dirname,"public")));
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'views', 'index.html'));

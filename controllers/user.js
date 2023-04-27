@@ -3,15 +3,10 @@ import User from '../models/user.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
 
-const EXP = 7200; // 2 godziny
+const EXP = 7200;
 
 export const signinUser = async (req, res) => {
   const data = req.body;
-  console.log('USER - SIGNIN', req.body);
-  // const data = {
-  //   email: 'postmaster@pralma.pl',
-  //   password: 'abc?B2023',
-  // };
   try {
     const oldUser = await User.findOne({ email: data.email });
     if (!oldUser) {
@@ -52,8 +47,6 @@ export const signinUser = async (req, res) => {
 };
 export const signupUser = async (req, res) => {
   const data = req.body;
-
-  console.log('USER - SIGNUP', req.body);
   try {
     const oldUser = await User.findOne({ email: data.email });
     if (oldUser) {

@@ -46,9 +46,6 @@ app.use(
   })
 );
 const __dirname = path.resolve();
-// app.use(express.static(path.join(__dirname, 'views')));
-console.log(__dirname)
-
 app.use(express.static(path.join(__dirname,"public")));
 
 app.get('/', function (req, res) {

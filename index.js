@@ -37,23 +37,14 @@ app.use(
   })
 );
 const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, 'build')));
+// app.use(express.static(path.join(__dirname, 'views')));
+
+app.use("/",express.static(path.join(__dirname,"public")));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-// app.enable("trust proxy");
-// app.use((req, res, next) => {
-//   console.log(req.headers.host); // - localhost:4000
-//   console.log(req.url); // - /customer
-//   console.log(req.secure); // false for http and tru for https
-//   return req.secure ? next() : res.redirect(`https://${req.headers.host}${req.url}`);
-// });
-
-
-
-app.use(express.static("public"));
 
 app.use("/product", productRoutes);
 app.use("/category", categoryRoutes);

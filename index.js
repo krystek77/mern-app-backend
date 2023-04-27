@@ -1,6 +1,6 @@
+dotenv.config();
 import * as dotenv from "dotenv"
 import * as path from 'path'
-dotenv.config();
 
 import express from "express";
 import mongoose from "mongoose";
@@ -38,6 +38,7 @@ app.use(
 );
 const __dirname = path.resolve();
 // app.use(express.static(path.join(__dirname, 'views')));
+console.log(__dirname)
 
 app.use("/",express.static(path.join(__dirname,"public")));
 

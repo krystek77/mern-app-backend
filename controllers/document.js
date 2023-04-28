@@ -3,6 +3,7 @@ import { promisify } from 'util';
 
 import File from '../models/document.js';
 import Product from '../models/product.js';
+import {server} from '../config/config.js'
 
 export const uploadDocument = (req, res, next) => {
   const files = req.files;
@@ -38,12 +39,12 @@ export const uploadDocument = (req, res, next) => {
     const type = file.mimetype.split('/')[1];
     const fileName = file.originalname.split('.')[0];
     const newFileName = `${fileName}.${type}`;
-    const path = `http://localhost:4000/assets/documents/${newFileName}`;
+    const path = `${server}/assets/documents/${newFileName}`;
     const size = file.size;
     return {
       fileName: `${fileName}.${type}`,
-      path: `http://localhost:4000/assets/documents/${newFileName}`,
-      size: file.size,
+      path: path,
+      size: size,
     };
   });
   res.status(200).json(mappedFiles);

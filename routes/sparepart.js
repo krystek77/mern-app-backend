@@ -13,7 +13,7 @@ import {
 } from '../controllers/sparepart.js';
 import { isAdmin } from '../middleware/auth/isAdmin.js';
 const router = express.Router();
-//http://localhost:4000/sparepart
+
 
 router.get('/', getAllSpareParts);
 router.get('/search', getSpareParts);

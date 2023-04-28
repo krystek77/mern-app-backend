@@ -13,7 +13,6 @@ import {
 } from '../controllers/supplier.js';
 import isAdmin from '../middleware/auth/isAdmin.js';
 
-//http://localhost:4000/supplier
 
 router.get('/', isAdmin, getAllSuppliers);
 router.get('/search', getSuppliers);

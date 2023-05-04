@@ -1,2 +1,4 @@
+
 use("custom");
 db.products.find({model:{$in:["RX-135","RX-80","RX-105"]}},{model:1,_id:0})
+db.products.updateMany({},{$set:{documents:[]}})

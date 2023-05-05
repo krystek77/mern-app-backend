@@ -248,6 +248,8 @@ export const getProductDetails = async (req, res) => {
  */
 export const getProductDetailsByModel = async (req, res) => {
   const { model } = req.params;
+  console.log(req);
+  console.log(req.ip);
   try {
     const product = await Product.findOne({ model }, '-__v').populate(
       'category'

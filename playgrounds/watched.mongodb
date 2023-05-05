@@ -1,0 +1,7 @@
+use('custom');
+db.watcheds.drop();
+db.watcheds.insertMany([
+    {clientIP:"::1",models:["BH-18E"]},
+    {clientIP:"127.0.0.1"},
+    {},
+])

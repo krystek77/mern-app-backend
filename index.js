@@ -24,6 +24,7 @@ import sparePartRoutes from "./routes/sparepart.js";
 import additionalEquipmentRoutes from "./routes/additionalEquipment.js";
 import userRoutes from "./routes/user.js";
 import NBPRoutes from "./routes/nbp.js";
+import watchedRoutes from './routes/watched.js';
 import {whiteList} from './config/config.js'
 
 const app = express();
@@ -70,6 +71,7 @@ app.use("/sparepart", sparePartRoutes);
 app.use("/supplier", supplierRoutes);
 app.use("/additional-equipment", additionalEquipmentRoutes);
 app.use("/user", userRoutes);
+app.use("/watched",watchedRoutes);
 
 const PORT = process.env.PORT || 5000;
 

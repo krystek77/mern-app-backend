@@ -4,43 +4,17 @@ mongoose.plugin(URLString);
 
 const categorySchema = new mongoose.Schema(
   {
-    icon: {
-      type: String,
-      default: "",
-    },
-    title: {
-      type: String,
-      required: [true, "Kategoria musi posiadać nazwę"],
-    },
-    image: {
-      type: String,
-      default: "",
-    },
+    icon: { type: String, default: "", },
+    title: { type: String, required: [true, "Kategoria musi posiadać nazwę"], },
+    image: { type: String, default: "", },
     features: [String],
-    desc: {
-      type: String,
-      default: "",
-    },
-    position: {
-      type: Number,
-      default: 1,
-    },
-    slug: {
-      type: String,
-      slug: "title",
-    },
-    wide: {
-      type: Boolean,
-      default: false,
-    },
-    coin: {
-      type: Boolean,
-      default: false,
-    },
-    pageView: {
-      type: Number,
-      default: 0,
-    },
+    desc: { type: String, default: "", },
+    position: { type: Number, default: 1, },
+    slug: { type: String, slug: "title", },
+    wide: { type: Boolean, default: false, },
+    coin: { type: Boolean, default: false, },
+    pageView: { type: Number, default: 0, },
+    ips:{type:Array,default:[]}
   },
   { timestamps: true }
 );

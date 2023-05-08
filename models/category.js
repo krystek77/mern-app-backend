@@ -6,20 +6,20 @@ const categorySchema = new mongoose.Schema(
   {
     icon: {
       type: String,
-      default: '',
+      default: "",
     },
     title: {
       type: String,
-      required: [true, 'Kategoria musi posiadać nazwę'],
+      required: [true, "Kategoria musi posiadać nazwę"],
     },
     image: {
       type: String,
-      default: '',
+      default: "",
     },
     features: [String],
     desc: {
       type: String,
-      default: '',
+      default: "",
     },
     position: {
       type: Number,
@@ -27,7 +27,7 @@ const categorySchema = new mongoose.Schema(
     },
     slug: {
       type: String,
-      slug: 'title',
+      slug: "title",
     },
     wide: {
       type: Boolean,
@@ -36,6 +36,10 @@ const categorySchema = new mongoose.Schema(
     coin: {
       type: Boolean,
       default: false,
+    },
+    pageView: {
+      type: Number,
+      default: 0,
     },
   },
   { timestamps: true }

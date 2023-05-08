@@ -28,3 +28,5 @@ db.categories.insertMany(
         {name:"przemysłowe do pralni samoobsługowej"},
       ],
 );
+
+db.categories.updateMany({},{$set:{pageView:0}});

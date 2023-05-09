@@ -16,7 +16,7 @@ export const increase = async (req, res) => {
 };
 export const getMost = async (req, res) => {
   try {
-    const result = await Category.find({},{image:1,title:1,pageView:1,slug:1},{sort:{pageView:-1},limit:4})
+    const result = await Category.find({},{image:1,title:1,pageView:1,slug:1,coin:1},{sort:{pageView:-1},limit:4})
     res.status(200).json(result)
 } catch (error) {
     res.status(409).json({ message: error.message });

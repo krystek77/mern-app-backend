@@ -4,8 +4,5 @@ export const server = dev
   ? 'http://localhost:4000'
   : 'https://pralma-api.onrender.com';
 
-  // export const server = dev
-  // ? 'http://localhost:4000'
-  // : 'https://wyposazeniepralniprzemyslowej.pl';
   
-export const whiteList = ["http://localhost:3000","https://pralma.onrender.com","https://wyposazeniepralniprzemyslowej.pl"];
+export const whiteList = ["http://localhost:3000","https://pralma.onrender.com","https://wyposazeniepralniprzemyslowej.pl","http://wyposazeniepralniprzemyslowej.pl"];
